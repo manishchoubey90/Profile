@@ -277,17 +277,30 @@ h2::after {
     align-items: start;
 }
 
-.resume-viewer {
+.resume-preview {
     background: var(--bg-white);
     border-radius: 12px;
     box-shadow: var(--shadow);
     overflow: hidden;
+    padding: 30px;
+    text-align: center;
 }
 
-.resume-viewer iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
+.resume-preview-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.resume-preview h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.resume-preview p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.7;
 }
 
 .resume-info {
@@ -534,10 +547,6 @@ footer p {
     .resume-container {
         grid-template-columns: 1fr;
     }
-    
-    .resume-viewer iframe {
-        height: 500px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -686,18 +695,28 @@ section {
     <h2>Resume</h2>
     
     <div class="resume-container">
-        <div class="resume-viewer">
-            <iframe src="https://docs.google.com/gvfs/drives/1234567890/view" title="Resume PDF Viewer"></iframe>
-        </div>
-        
-        <div class="resume-info">
-            <h3>📄 My Professional Resume</h3>
+        <div class="resume-preview">
+            <div class="resume-preview-icon">📄</div>
+            <h3>Professional Resume</h3>
             <p>
                 Download my comprehensive resume to see my complete professional background, technical skills, 
                 project experience, and certifications.
             </p>
+            <a href="https://github.com/manishchoubey90/Profile/raw/main/Manish%20Choubey%20Sr%20QA%20Analyst%20Resume%2015%20June%202026.pdf" 
+               download 
+               class="btn-download">
+                ⬇️ Download Resume (PDF)
+            </a>
+        </div>
+        
+        <div class="resume-info">
+            <h3>📋 Key Highlights</h3>
+            <p>
+                My resume showcases my professional journey and expertise across quality assurance, automation testing, and 
+                team leadership.
+            </p>
             
-            <h4 style="color: var(--primary); margin-top: 20px;">Key Highlights:</h4>
+            <h4 style="color: var(--primary); margin-top: 20px;">What's Included:</h4>
             <ul class="resume-highlights">
                 <li>✅ 5.8+ years in QA and Automation Testing</li>
                 <li>✅ Expert in Selenium, Python, and API Testing</li>
@@ -705,13 +724,9 @@ section {
                 <li>✅ Proven track record of improving test coverage and reducing defects</li>
                 <li>✅ Mentoring and team leadership experience</li>
                 <li>✅ ISTQB Certified Tester</li>
+                <li>✅ Detailed project experience and achievements</li>
+                <li>✅ Professional certifications and training</li>
             </ul>
-            
-            <a href="https://github.com/manishchoubey90/Profile/raw/main/Manish%20Choubey%20Sr%20QA%20Analyst%20Resume%2015%20June%202026.pdf" 
-               download 
-               class="btn-download">
-                ⬇️ Download Resume (PDF)
-            </a>
         </div>
     </div>
 </section>
