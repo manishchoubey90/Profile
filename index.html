@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manish Choubey - Senior QA Engineer with 5.8+ years of experience in automation testing, API testing, and quality assurance">
+<meta name="keywords" content="QA Engineer, Automation Testing, Selenium, Python, API Testing, JIRA, Manual Testing">
+<meta name="author" content="Manish Choubey">
+<meta property="og:title" content="Manish Choubey | Senior QA Engineer">
+<meta property="og:description" content="Senior QA Engineer with expertise in Automation Testing, Selenium, Python, and API Testing">
+<meta property="og:image" content="https://raw.githubusercontent.com/manishchoubey90/Profile/main/Manish.jpeg">
 <title>Manish Choubey | Senior QA Engineer</title>
 
 <style>
@@ -10,91 +16,506 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #0d47a1;
+    --primary-light: #1565c0;
+    --primary-dark: #0a3d91;
+    --accent: #ff6f00;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f5f7fa;
+    --bg-white: #ffffff;
+    --shadow: 0 2px 12px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #e0e0e0;
+        --text-light: #b0b0b0;
+        --bg-light: #1a1a1a;
+        --bg-white: #2d2d2d;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
-    background:#f5f7fa;
-    color:#333;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
+/* Skip to content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Navigation */
+nav {
+    background: var(--primary);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: var(--primary-dark);
+}
+
+/* Header */
 header{
-    background:#0d47a1;
-    color:#fff;
-    text-align:center;
-    padding:60px 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
 }
 
 header img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #fff;
-    margin-bottom:20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.05);
 }
 
 header h1{
-    font-size:42px;
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 header h3{
-    font-weight:400;
-    margin:10px 0;
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    font-size: 16px;
+    margin: 15px 0;
+    position: relative;
+    z-index: 1;
+    opacity: 0.95;
+}
+
+.header-cta {
+    position: relative;
+    z-index: 1;
 }
 
 .btn{
-    display:inline-block;
-    background:#fff;
-    color:#0d47a1;
-    text-decoration:none;
-    padding:12px 25px;
-    margin:15px 10px;
-    border-radius:30px;
-    font-weight:bold;
+    display: inline-block;
+    background: #fff;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 12px 28px;
+    margin: 15px 10px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #fff;
+    cursor: pointer;
 }
 
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: var(--primary);
+}
+
+/* Sections */
 section{
-    max-width:1000px;
-    margin:auto;
-    padding:60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+section:nth-child(even) {
+    background: var(--bg-white);
 }
 
 h2{
-    color:#0d47a1;
-    margin-bottom:20px;
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
 }
 
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.about-highlight {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Skills */
 .skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .skills span{
-    background:#0d47a1;
-    color:#fff;
-    padding:10px 15px;
-    border-radius:20px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: default;
 }
 
+.skills span:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(13, 71, 161, 0.3);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--bg-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.project-card p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.project-tags span {
+    background: #f0f0f0;
+    color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Experience */
 .card{
-    background:#fff;
-    padding:20px;
-    margin:20px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    background: var(--bg-white);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent);
+    transition: all 0.3s;
 }
 
-footer{
-    background:#0d47a1;
-    color:#fff;
-    text-align:center;
-    padding:20px;
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateX(5px);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.card strong {
+    color: var(--text-dark);
+    display: block;
+    margin: 8px 0;
+}
+
+.card p {
+    color: var(--text-light);
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.duration {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Certifications Section */
+.certifications-list {
+    display: grid;
+    gap: 15px;
+}
+
+.cert-item {
+    background: var(--bg-white);
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cert-icon {
+    font-size: 28px;
+    min-width: 40px;
+}
+
+/* Contact Section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: var(--bg-white);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+}
+
+.contact-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-card strong {
+    display: block;
+    margin: 10px 0;
+    color: var(--primary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 20px;
+}
+
+.social-link:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
 }
 
 a{
-    color:#1565c0;
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* Footer */
+footer{
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav a {
+        text-align: center;
+        padding: 12px 15px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Print Styles */
+@media print {
+    nav {
+        display: none;
+    }
+    
+    .btn {
+        border: 1px solid var(--primary);
+    }
 }
 </style>
 
@@ -102,118 +523,253 @@ a{
 
 <body>
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main Navigation">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <header>
-
-<!-- Replace photo.jpg with your image -->
-<img src="photo.jpg" alt="Manish Choubey">
-
-<h1>Manish Choubey</h1>
-
-<h3>Senior QA Engineer</h3>
-
-<p>5.8+ Years of Experience in Manual & Automation Testing</p>
-
-<a class="btn" href="resume.pdf">Download Resume</a>
-
-<a class="btn" href="mailto:Manish.choubey90@gmail.com">Hire Me</a>
-
+    <img src="Manish.jpeg" alt="Manish Choubey - Senior QA Engineer" title="Profile Photo">
+    
+    <h1>Manish Choubey</h1>
+    
+    <h3>Senior QA Engineer</h3>
+    
+    <p>5.8+ Years of Experience in Manual & Automation Testing</p>
+    
+    <div class="header-cta">
+        <a class="btn" href="https://github.com/manishchoubey90/Profile/raw/main/Manish%20Choubey%20Sr%20QA%20Analyst%20Resume%2015%20June%202026.pdf" download aria-label="Download my resume">
+            📥 Download Resume
+        </a>
+        <a class="btn btn-secondary" href="mailto:Manish.choubey90@gmail.com" aria-label="Send me an email">
+            ✉️ Hire Me
+        </a>
+    </div>
 </header>
 
-<section>
+<main id="main">
 
-<h2>About Me</h2>
+<section id="about">
+    <h2>About Me</h2>
+    
+    <div class="about-content">
+        <p>
+            Results-driven Senior QA Engineer with <span class="about-highlight">5.8+ years</span> of proven expertise in 
+            comprehensive quality assurance and automation testing. Specialized in designing and executing robust test strategies, 
+            developing maintainable automation frameworks, and ensuring product excellence through meticulous manual testing.
+        </p>
+        
+        <p style="margin-top: 15px;">
+            My technical toolkit includes <span class="about-highlight">Selenium WebDriver</span>, <span class="about-highlight">Python</span>, 
+            and <span class="about-highlight">API testing</span> with Postman. I'm passionate about improving testing efficiency, reducing 
+            defect escape rates, and collaborating with cross-functional teams in Agile environments. Currently focusing on building 
+            scalable automation frameworks and mentoring junior QA engineers.
+        </p>
+    </div>
+</section>
 
-<p>
-Results-driven Senior QA Engineer with expertise in Manual Testing,
-Automation Testing, API Testing, Selenium WebDriver (Python), Postman,
-JIRA, SQL, Git, Agile, Regression Testing, and STLC.
-</p>
+<section id="skills">
+    <h2>Technical Skills</h2>
+    
+    <div class="skills">
+        <span>Manual Testing</span>
+        <span>Automation Testing</span>
+        <span>Selenium WebDriver</span>
+        <span>Python</span>
+        <span>API Testing</span>
+        <span>Postman</span>
+        <span>SQL</span>
+        <span>Git</span>
+        <span>JIRA</span>
+        <span>TestNG</span>
+        <span>Agile</span>
+        <span>Regression Testing</span>
+        <span>Performance Testing</span>
+        <span>Database Testing</span>
+    </div>
+</section>
 
+<section id="projects">
+    <h2>Key Projects</h2>
+    
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>🤖 Selenium Automation Framework</h3>
+            <p>Developed a comprehensive test automation framework using Selenium WebDriver with Python for web application testing. 
+            Implemented Page Object Model (POM) pattern and integrated with CI/CD pipelines.</p>
+            <div class="project-tags">
+                <span>Selenium</span>
+                <span>Python</span>
+                <span>TestNG</span>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <h3>🔌 API Testing Suite</h3>
+            <p>Built comprehensive REST API testing suite using Postman and Python. Created automated tests for multiple endpoints 
+            with proper validation and error handling. Improved API release quality by 40%.</p>
+            <div class="project-tags">
+                <span>Postman</span>
+                <span>Python</span>
+                <span>REST APIs</span>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <h3>📊 Test Metrics Dashboard</h3>
+            <p>Designed and maintained comprehensive testing metrics dashboard using JIRA and SQL queries. Provided real-time 
+            visibility into test coverage, defect trends, and team productivity.</p>
+            <div class="project-tags">
+                <span>JIRA</span>
+                <span>SQL</span>
+                <span>Analytics</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+        <h3>Senior QA Analyst</h3>
+        <p><strong>FXBytes Technologies Pvt. Ltd.</strong></p>
+        <p><span class="duration">Feb 2024 – Nov 2025</span></p>
+        <p>
+            • Led automation testing for multiple projects, achieving 85% test coverage<br>
+            • Mentored junior QA engineers and conducted quality assurance training<br>
+            • Reduced defect escape rate by 30% through improved testing strategies<br>
+            • Implemented CI/CD integration for automated test execution
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Senior QA Analyst</h3>
+        <p><strong>Alphawizz Technologies Pvt. Ltd.</strong></p>
+        <p><span class="duration">Sep 2023 – Feb 2024</span></p>
+        <p>
+            • Developed and maintained Selenium-based test automation framework<br>
+            • Executed comprehensive manual and regression testing for web applications<br>
+            • Collaborated with development team to ensure bug-free releases<br>
+            • Created detailed test documentation and test case management
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>QA Engineer</h3>
+        <p><strong>6DegreesIT Pvt. Ltd.</strong></p>
+        <p><span class="duration">Jul 2021 – Aug 2023</span></p>
+        <p>
+            • Performed manual testing on multiple projects using various testing techniques<br>
+            • Developed Python scripts for test automation using Selenium WebDriver<br>
+            • Conducted API testing using Postman and SQL database validation<br>
+            • Participated in Agile ceremonies and contributed to sprint goals
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Senior Associate Consultant (Business Analyst)</h3>
+        <p><strong>The Basics Digital Solutions Pvt. Ltd.</strong></p>
+        <p><span class="duration">Jul 2017 – Mar 2018</span></p>
+        <p>
+            • Analyzed business requirements and created detailed test plans<br>
+            • Coordinated with stakeholders for requirement clarity<br>
+            • Managed testing activities and quality assurance processes
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>QA Test Engineer</h3>
+        <p><strong>Touchstoneinfotech LLP Pvt Ltd.</strong></p>
+        <p><span class="duration">Jul 2016 – Jun 2017</span></p>
+        <p>
+            • Conducted functional and system testing for web applications<br>
+            • Identified and reported bugs using JIRA<br>
+            • Performed regression testing and smoke testing<br>
+            • Created detailed test cases and test documentation
+        </p>
+    </div>
 </section>
 
 <section>
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<span>Manual Testing</span>
-<span>Automation Testing</span>
-<span>Selenium</span>
-<span>Python</span>
-<span>API Testing</span>
-<span>Postman</span>
-<span>SQL</span>
-<span>Git</span>
-<span>JIRA</span>
-<span>Agile</span>
-<span>Regression Testing</span>
-
-</div>
-
+    <h2>Certifications & Training</h2>
+    
+    <div class="certifications-list">
+        <div class="cert-item">
+            <div class="cert-icon">🎓</div>
+            <div>
+                <strong>ISTQB Certified Tester</strong>
+                <p>Certified in Software Testing</p>
+            </div>
+        </div>
+        <div class="cert-item">
+            <div class="cert-icon">📚</div>
+            <div>
+                <strong>Selenium & Python for QA Automation</strong>
+                <p>Advanced automation testing framework development</p>
+            </div>
+        </div>
+        <div class="cert-item">
+            <div class="cert-icon">💼</div>
+            <div>
+                <strong>Agile & Scrum Fundamentals</strong>
+                <p>Agile testing practices and methodologies</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section>
-
-<h2>Experience</h2>
-
-<div class="card">
-<h3>Senior QA Analyst</h3>
-<p><strong>FXBytes Technologies Pvt. Ltd.</strong></p>
-<p>Feb 2024 – Nov 2025</p>
-</div>
-
-<div class="card">
-<h3>Senior QA Analyst</h3>
-<p><strong>Alphawizz Technologies Pvt. Ltd.</strong></p>
-<p>Sep 2023 – Feb 2024</p>
-</div>
-
-<div class="card">
-<h3>QA Engineer</h3>
-<p><strong>6DegreesIT Pvt. Ltd.</strong></p>
-<p>Jul 2021 – Aug 2023</p>
-</div>
-
-<div class="card">
-<h3>Senior Associate Consultant (BA)</h3>
-<p><strong>The Basics digital solutions pvt. ltd.</strong></p>
-<p>Jul 2017 – March 2018</p>
-</div>
-
-<div class="card">
-<h3>QA Test Engineer </h3>
-<p><strong>Touchstoneinfotech LLP Pvt Ltd.</strong></p>
-<p>Jul 2016 – Jun 2017</p>
-</div>
+<section id="contact">
+    <h2>Get In Touch</h2>
+    
+    <div class="contact-info">
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <strong>Email</strong>
+            <a href="mailto:Manish.choubey90@gmail.com">Manish.choubey90@gmail.com</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <strong>Phone</strong>
+            <p>+91 9584491400</p>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <strong>Location</strong>
+            <p>India</p>
+        </div>
+    </div>
+    
+    <div class="social-links" style="margin-top: 40px;">
+        <a href="https://www.linkedin.com/in/manish-choubey-b249b1204/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           aria-label="LinkedIn Profile"
+           title="Connect on LinkedIn">
+            in
+        </a>
+        <a href="https://github.com/manishchoubey90" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           aria-label="GitHub Profile"
+           title="View my GitHub">
+            ⚙️
+        </a>
+    </div>
 </section>
 
-<section>
-
-<h2>Contact</h2>
-
-<p><strong>Email:</strong> Manish.choubey90@gmail.com</p>
-
-<p><strong>Phone:</strong> +91 9584491400</p>
-
-<p><strong>LinkedIn:</strong>
-<a href="https://www.linkedin.com/in/manish-choubey-b249b1204/" target="_blank">
-linkedin.com/in/manish-choubey-b249b1204
-</a>
-</p>
-
-<p><strong>GitHub:</strong>
-<a href="https://github.com/manishchoubey90" target="_blank">
-github.com/manishchoubey90
-</a>
-</p>
-
-</section>
+</main>
 
 <footer>
-
-<p>© 2026 Manish Choubey | Senior QA Engineer</p>
-
+    <p>&copy; 2026 Manish Choubey | Senior QA Engineer</p>
+    <p>Crafted with ❤️ for quality assurance excellence</p>
 </footer>
 
 </body>
