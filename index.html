@@ -82,7 +82,7 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -92,6 +92,7 @@ nav a {
     text-decoration: none;
     padding: 15px 20px;
     transition: background 0.3s;
+    font-size: 14px;
 }
 
 nav a:hover {
@@ -201,7 +202,7 @@ header p {
 
 /* Sections */
 section{
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     padding: 60px 20px;
 }
@@ -266,6 +267,75 @@ h2::after {
 .skills span:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(13, 71, 161, 0.3);
+}
+
+/* Resume Section */
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.resume-viewer {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.resume-viewer iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+.resume-info {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.resume-info h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.resume-info p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.resume-highlights {
+    margin: 20px 0;
+}
+
+.resume-highlights li {
+    color: var(--text-light);
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.btn-download {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.3);
 }
 
 /* Projects Section */
@@ -460,6 +530,16 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .resume-viewer iframe {
+        height: 500px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 50px 20px;
@@ -480,6 +560,7 @@ footer p {
     nav a {
         text-align: center;
         padding: 12px 15px;
+        font-size: 13px;
     }
     
     .projects-grid {
@@ -488,6 +569,10 @@ footer p {
     
     .contact-info {
         grid-template-columns: 1fr;
+    }
+    
+    .resume-info {
+        padding: 20px;
     }
 }
 
@@ -529,6 +614,7 @@ section {
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -593,6 +679,40 @@ section {
         <span>Regression Testing</span>
         <span>Performance Testing</span>
         <span>Database Testing</span>
+    </div>
+</section>
+
+<section id="resume">
+    <h2>Resume</h2>
+    
+    <div class="resume-container">
+        <div class="resume-viewer">
+            <iframe src="https://docs.google.com/gvfs/drives/1234567890/view" title="Resume PDF Viewer"></iframe>
+        </div>
+        
+        <div class="resume-info">
+            <h3>📄 My Professional Resume</h3>
+            <p>
+                Download my comprehensive resume to see my complete professional background, technical skills, 
+                project experience, and certifications.
+            </p>
+            
+            <h4 style="color: var(--primary); margin-top: 20px;">Key Highlights:</h4>
+            <ul class="resume-highlights">
+                <li>✅ 5.8+ years in QA and Automation Testing</li>
+                <li>✅ Expert in Selenium, Python, and API Testing</li>
+                <li>✅ Strong background in Agile and JIRA</li>
+                <li>✅ Proven track record of improving test coverage and reducing defects</li>
+                <li>✅ Mentoring and team leadership experience</li>
+                <li>✅ ISTQB Certified Tester</li>
+            </ul>
+            
+            <a href="https://github.com/manishchoubey90/Profile/raw/main/Manish%20Choubey%20Sr%20QA%20Analyst%20Resume%2015%20June%202026.pdf" 
+               download 
+               class="btn-download">
+                ⬇️ Download Resume (PDF)
+            </a>
+        </div>
     </div>
 </section>
 
